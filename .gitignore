@@ -1,0 +1,29 @@
+# Ignorar archivos y directorios generados automáticamente por Visual Studio
+.vscode/
+.vs/
+bin/
+obj/
+packages/
+*.suo
+*.user
+*.sln.docstates
+
+Trixi/.vs/
+Trixi/.bin/
+Trixi/.obj/
+
+# Ignorar archivos de usuario y configuración
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignorar archivos de respaldo de Visual Studio
+*.[Bb]ak
+
+# Ignorar archivos de compilación de C#
+[Tt]humbs.db
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

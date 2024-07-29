@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trixi.V2", "Trixi.V2\Trixi.V2.csproj", "{0D3D3596-B1C2-4AFB-8D56-932E7E0A3E56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D3D3596-B1C2-4AFB-8D56-932E7E0A3E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3D3596-B1C2-4AFB-8D56-932E7E0A3E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3D3596-B1C2-4AFB-8D56-932E7E0A3E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3D3596-B1C2-4AFB-8D56-932E7E0A3E56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC67ED09-CAC8-417E-A72E-0D0D3467D37E}
+	EndGlobalSection
+EndGlobal
