@@ -1,0 +1,34 @@
+﻿<Window x:Class="Trixi.V2.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trixi.V2"
+        mc:Ignorable="d"
+        Title="StartWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#2980B9" Offset="0.0" />
+                <GradientStop Color="#6DD5FA" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!-- Título del juego -->
+        <TextBlock Text="Bienvenido a Trixi" FontSize="36" FontWeight="Bold" Foreground="White"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0"/>
+
+        <!-- Imagen decorativa -->
+        <Image Source="Images/GameLogo.png" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <!-- Botón de iniciar juego -->
+        <Button Content="Iniciar Juego" Width="200" Height="50" FontSize="16" FontWeight="Bold"
+                HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50"
+                Background="#E74C3C" Foreground="White" BorderBrush="#C0392B" Click="StartGame_Click"
+                Cursor="Hand" />
+
+        <!-- Texto de pie de página -->
+        <TextBlock Text="© 2024 Trixi Daniel Moreno" FontSize="12" Foreground="White"
+                   HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
+    </Grid>
+</Window>
