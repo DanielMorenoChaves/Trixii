@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Threading;
 using System.Collections.Generic;
 using System.Configuration;
 using System.DirectoryServices;
@@ -20,6 +21,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Color = System.Windows.Media.Color;
 using Label = System.Windows.Controls.Label;
+using System.Media;
 
 namespace Trixi.V2
 {
@@ -31,9 +33,13 @@ namespace Trixi.V2
         public Label labelR;
         public Label labelA;
         public Label TurnLabel;
+        private DispatcherTimer timer;
+        public int act = 0;
+        private SoundPlayer Musica;
         public MainWindow()
         {
             InitializeComponent();
+            PlayBackGroundMusic();
             labelR = new Label();
             labelR.Content = "Puntaje Rojo: " + PuntajeR;
             labelR.Width = 100;
@@ -58,6 +64,7 @@ namespace Trixi.V2
             grid.Children.Add(TurnLabel);
 
             UpdateTurnLabel();
+
         }
 
         int PuntajeR = 0;
@@ -84,6 +91,12 @@ namespace Trixi.V2
             {
                 TurnLabel.Content = "Turno = Rojo";
             }
+        }
+        public void PlayBackGroundMusic()
+        {
+            Musica = new SoundPlayer();
+            Musica.Stream = Trixi.V2.Properties.Resources.background_music;
+            Musica.PlayLooping();
         }
         private bool ShowMathProblem()
         {
@@ -121,6 +134,7 @@ namespace Trixi.V2
         }
         public void quienGano()
         {
+
             if (ActivacionesA[0] == true && ActivacionesA[1] == true && ActivacionesA[2] == true || ActivacionesA[3] == true && ActivacionesA[4] == true
                 && ActivacionesA[5] == true || ActivacionesA[6] == true && ActivacionesA[7] == true && ActivacionesA[8] == true || ActivacionesA[0] == true
                 && ActivacionesA[4] == true && ActivacionesA[8] == true || ActivacionesA[2] == true && ActivacionesA[4] == true && ActivacionesA[6] == true
@@ -166,13 +180,14 @@ namespace Trixi.V2
 
         public void Origin_button_Click(int columna, int Row, int numero, int numero2)
         {
+          
             if (Activaciones[numero2] == true)
             {
                 return;
             }
             if (!ShowMathProblem())
             {
-                MessageBox.Show("Respuesta incorrecta. Inténtalo de nuevo.");
+                MessageBox.Show("Respuesta incorrecta.");
                 if(TurnoRojo == true)
                 {
                     TurnoRojo = false;
@@ -200,6 +215,7 @@ namespace Trixi.V2
             Activaciones[numero2] = true;
             activacion++;
             UpdateTurnLabel();
+            act++;
             quienGano();
             
         }
