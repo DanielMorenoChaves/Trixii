@@ -77,5 +77,14 @@ namespace Trixi.V2.Properties {
                 return ResourceManager.GetStream("background_music1", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream button_124476 {
+            get {
+                return ResourceManager.GetStream("button-124476", resourceCulture);
+            }
+        }
     }
 }

@@ -22,6 +22,7 @@ using System.Windows.Shapes;
 using Color = System.Windows.Media.Color;
 using Label = System.Windows.Controls.Label;
 using System.Media;
+using System.IO;
 
 namespace Trixi.V2
 {
@@ -36,6 +37,8 @@ namespace Trixi.V2
         private DispatcherTimer timer;
         public int act = 0;
         private SoundPlayer Musica;
+        private SoundPlayer buttonSound = new SoundPlayer();
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -96,8 +99,10 @@ namespace Trixi.V2
         {
             Musica = new SoundPlayer();
             Musica.Stream = Trixi.V2.Properties.Resources.background_music;
+            buttonSound.Stream = Trixi.V2.Properties.Resources.button_124476;
             Musica.PlayLooping();
         }
+
         private bool ShowMathProblem()
         {
             Random rand = new Random();
@@ -134,7 +139,7 @@ namespace Trixi.V2
         }
         public void quienGano()
         {
-
+            
             if (ActivacionesA[0] == true && ActivacionesA[1] == true && ActivacionesA[2] == true || ActivacionesA[3] == true && ActivacionesA[4] == true
                 && ActivacionesA[5] == true || ActivacionesA[6] == true && ActivacionesA[7] == true && ActivacionesA[8] == true || ActivacionesA[0] == true
                 && ActivacionesA[4] == true && ActivacionesA[8] == true || ActivacionesA[2] == true && ActivacionesA[4] == true && ActivacionesA[6] == true
@@ -180,7 +185,7 @@ namespace Trixi.V2
 
         public void Origin_button_Click(int columna, int Row, int numero, int numero2)
         {
-          
+            buttonSound.Play();
             if (Activaciones[numero2] == true)
             {
                 return;

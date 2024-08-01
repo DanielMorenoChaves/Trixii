@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trixi.V2"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Name="grid">
+        Title="MainWindow" Height="600" Width="800">
+    <Grid Name="grid" Background="#282C34" Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -18,16 +18,54 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click0" Tag="1"/>
-        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click0" Tag="2"/>
-        <Button Grid.Row="2" Grid.Column="0" Click="Button_Click0" Tag="3"/>
+        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click0" Tag="1" 
+            Background="#3E4451" Foreground="White" FontSize="24" FontWeight="Bold" 
+            BorderBrush="#61AFEF" BorderThickness="2" Margin="5">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
-        <Button Grid.Row="0" Grid.Column="1" Click="Button_Click0" Tag="4"/>
-        <Button Grid.Row="1" Grid.Column="1" Click="Button_Click0" Tag="5"/>
-        <Button Grid.Row="2" Grid.Column="1" Click="Button_Click0" Tag="6"/>
+        <!-- Repite para los otros botones, o aplica estilo global en App.xaml -->
 
-        <Button Grid.Row="0" Grid.Column="2" Click="Button_Click0" Tag="7"/>
-        <Button Grid.Row="1" Grid.Column="2" Click="Button_Click0" Tag="8"/>
-        <Button Grid.Row="2" Grid.Column="2" Click="Button_Click0" Tag="9"/>
+        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click0" Tag="2" 
+            Background="#3E4451" Foreground="White" FontSize="24" FontWeight="Bold" 
+            BorderBrush="#61AFEF" BorderThickness="2" Margin="5"/>
+
+        <Button Grid.Row="2" Grid.Column="0" Click="Button_Click0" Tag="3" 
+            Background="#3E4451" Foreground="White" FontSize="24" FontWeight="Bold" 
+            BorderBrush="#61AFEF" BorderThickness="2" Margin="5"/>
+
+        <Button Grid.Row="0" Grid.Column="1" Click="Button_Click0" Tag="4" 
+            Background="#3E4451" Foreground="White" FontSize="24" FontWeight="Bold" 
+            BorderBrush="#61AFEF" BorderThickness="2" Margin="5"/>
+
+        <Button Grid.Row="1" Grid.Column="1" Click="Button_Click0" Tag="5" 
+            Background="#3E4451" Foreground="White" FontSize="24" FontWeight="Bold" 
+            BorderBrush="#61AFEF" BorderThickness="2" Margin="5"/>
+
+        <Button Grid.Row="2" Grid.Column="1" Click="Button_Click0" Tag="6" 
+            Background="#3E4451" Foreground="White" FontSize="24" FontWeight="Bold" 
+            BorderBrush="#61AFEF" BorderThickness="2" Margin="5"/>
+
+        <Button Grid.Row="0" Grid.Column="2" Click="Button_Click0" Tag="7" 
+            Background="#3E4451" Foreground="White" FontSize="24" FontWeight="Bold" 
+            BorderBrush="#61AFEF" BorderThickness="2" Margin="5"/>
+
+        <Button Grid.Row="1" Grid.Column="2" Click="Button_Click0" Tag="8" 
+            Background="#3E4451" Foreground="White" FontSize="24" FontWeight="Bold" 
+            BorderBrush="#61AFEF" BorderThickness="2" Margin="5"/>
+
+        <Button Grid.Row="2" Grid.Column="2" Click="Button_Click0" Tag="9" 
+            Background="#3E4451" Foreground="White" FontSize="24" FontWeight="Bold" 
+            BorderBrush="#61AFEF" BorderThickness="2" Margin="5"/>
     </Grid>
+
 </Window>
