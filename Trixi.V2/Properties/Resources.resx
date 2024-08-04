@@ -127,4 +127,28 @@
   <data name="button-124476" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button-124476.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Delirious_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delirious_1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Eminem_Venom_Official_Audio_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eminem-Venom_Official-Audio_.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Eminem_Without_Me__Lyrics_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eminem-Without-Me-_Lyrics_.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Jujutsu_Kaisen_Self_Embodiment_of_Perfection_OST__EXTENDED_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jujutsu-Kaisen-Self-Embodiment-of-Perfection-OST-_EXTENDED_.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="King_Gnu_SPECIALZ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\King-Gnu-SPECIALZ.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Not_Like_Us" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Not-Like-Us.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Skyrim_Theme_Song_Full__Dovahkiin_Song_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skyrim-Theme-Song-Full-_Dovahkiin-Song_.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Undertale_Megalovania" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Undertale-Megalovania.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -86,5 +86,77 @@ namespace Trixi.V2.Properties {
                 return ResourceManager.GetStream("button-124476", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Delirious_1 {
+            get {
+                return ResourceManager.GetStream("Delirious_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Eminem_Venom_Official_Audio_ {
+            get {
+                return ResourceManager.GetStream("Eminem_Venom_Official_Audio_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Eminem_Without_Me__Lyrics_ {
+            get {
+                return ResourceManager.GetStream("Eminem_Without_Me__Lyrics_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Jujutsu_Kaisen_Self_Embodiment_of_Perfection_OST__EXTENDED_ {
+            get {
+                return ResourceManager.GetStream("Jujutsu_Kaisen_Self_Embodiment_of_Perfection_OST__EXTENDED_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream King_Gnu_SPECIALZ {
+            get {
+                return ResourceManager.GetStream("King_Gnu_SPECIALZ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Not_Like_Us {
+            get {
+                return ResourceManager.GetStream("Not_Like_Us", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Skyrim_Theme_Song_Full__Dovahkiin_Song_ {
+            get {
+                return ResourceManager.GetStream("Skyrim_Theme_Song_Full__Dovahkiin_Song_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Undertale_Megalovania {
+            get {
+                return ResourceManager.GetStream("Undertale_Megalovania", resourceCulture);
+            }
+        }
     }
 }

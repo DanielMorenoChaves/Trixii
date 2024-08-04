@@ -36,19 +36,30 @@ namespace Trixi.V2
         public Label TurnLabel;
         private DispatcherTimer timer;
         public int act = 0;
-        private SoundPlayer Musica;
+        private SoundPlayer Musica = new SoundPlayer();
+        private SoundPlayer Musica2 = new SoundPlayer();
+        private SoundPlayer Musica3 = new SoundPlayer();
+        private SoundPlayer Musica4 = new SoundPlayer();
+        private SoundPlayer Musica5 = new SoundPlayer();    
+        private SoundPlayer Musica6 = new SoundPlayer();
+        private SoundPlayer Musica7 = new SoundPlayer();
+        private SoundPlayer Musica8 = new SoundPlayer();
         private SoundPlayer buttonSound = new SoundPlayer();
-        
+        private SoundPlayer backGroundMusic = new SoundPlayer();
         public MainWindow()
         {
             InitializeComponent();
             PlayBackGroundMusic();
+
+            
+
             labelR = new Label();
             labelR.Content = "Puntaje Rojo: " + PuntajeR;
             labelR.Width = 100;
             labelR.Height = 100;
             Grid.SetRow(labelR, 0);
             Grid.SetColumn(labelR, 3);
+            labelR.Foreground = new SolidColorBrush(Colors.AliceBlue);
             grid.Children.Add(labelR);
             
             labelA = new Label();
@@ -57,6 +68,7 @@ namespace Trixi.V2
             labelA.Height = 100;
             Grid.SetRow(labelA, 2);
             Grid.SetColumn(labelA, 3);
+            labelA.Foreground = new SolidColorBrush(Colors.AliceBlue);
             grid.Children.Add(labelA);
             
             TurnLabel = new Label();
@@ -89,18 +101,75 @@ namespace Trixi.V2
             if (TurnoRojo == false)
             {
                 TurnLabel.Content = "Turno = Azul";
+                TurnLabel.Foreground = new SolidColorBrush(Colors.Blue);
             }
             else
             {
                 TurnLabel.Content = "Turno = Rojo";
+                TurnLabel.Foreground = new SolidColorBrush(Colors.Red);
             }
+        }
+        public void ChooseBackGroundMusic()
+        {
+            Random rand = new Random();
+            int Elec = rand.Next(1, 8);
+            timer = new DispatcherTimer();
+            Musica.Stream = Trixi.V2.Properties.Resources.background_music;
+            Musica2.Stream = Trixi.V2.Properties.Resources.Delirious_1;
+            Musica3.Stream = Trixi.V2.Properties.Resources.Jujutsu_Kaisen_Self_Embodiment_of_Perfection_OST__EXTENDED_;
+            Musica4.Stream = Trixi.V2.Properties.Resources.Not_Like_Us;
+            Musica5.Stream = Trixi.V2.Properties.Resources.Eminem_Venom_Official_Audio_;
+            Musica6.Stream = Trixi.V2.Properties.Resources.Eminem_Without_Me__Lyrics_;
+            Musica7.Stream = Trixi.V2.Properties.Resources.Undertale_Megalovania;
+            Musica8.Stream = Trixi.V2.Properties.Resources.Skyrim_Theme_Song_Full__Dovahkiin_Song_;
+            switch (Elec)
+            {
+                case 1:
+                    backGroundMusic.Stream = Musica.Stream;
+                    timer.Interval = TimeSpan.FromMinutes(4);
+                    break;
+                case 2:
+                    backGroundMusic.Stream = Musica2.Stream;
+                    timer.Interval = TimeSpan.FromSeconds(150);
+                    break;
+                case 3:
+                    backGroundMusic.Stream = Musica3.Stream;
+                    timer.Interval = TimeSpan.FromMinutes(3);
+                    break;
+                case 4:
+                    backGroundMusic.Stream = Musica4.Stream;
+                    timer.Interval = TimeSpan.FromSeconds(273);
+                    break;
+                case 5:
+                    backGroundMusic.Stream = Musica5.Stream;
+                    timer.Interval = TimeSpan.FromSeconds(270);
+                    break;
+                case 6:
+                    backGroundMusic.Stream = Musica6.Stream;
+                    timer.Interval = TimeSpan.FromSeconds(290);
+                    break;
+                case 7:
+                    backGroundMusic.Stream = Musica7.Stream;
+                    timer.Interval = TimeSpan.FromSeconds(313);
+                    break;
+                case 8:
+                    backGroundMusic.Stream = Musica8.Stream;
+                    timer.Interval = TimeSpan.FromMinutes(4);
+                    break;
+            }
+            timer.Tick += Loop;
         }
         public void PlayBackGroundMusic()
         {
-            Musica = new SoundPlayer();
-            Musica.Stream = Trixi.V2.Properties.Resources.background_music;
-            buttonSound.Stream = Trixi.V2.Properties.Resources.button_124476;
-            Musica.PlayLooping();
+            ChooseBackGroundMusic();
+            backGroundMusic.Play();
+            timer.Start();
+           
+        }
+        private void Loop(object sender, EventArgs e)
+        {
+            timer.Stop();
+            PlayBackGroundMusic();
         }
 
         private bool ShowMathProblem()
@@ -185,7 +254,6 @@ namespace Trixi.V2
 
         public void Origin_button_Click(int columna, int Row, int numero, int numero2)
         {
-            buttonSound.Play();
             if (Activaciones[numero2] == true)
             {
                 return;
